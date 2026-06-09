@@ -26,4 +26,4 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/wisecow-app:latest
+        tags: jayasreek793/wisecow-app:latest
