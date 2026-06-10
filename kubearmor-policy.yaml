@@ -1,0 +1,15 @@
+apiVersion: ://kubearmor.com
+kind: KubeArmorPolicy
+metadata:
+  name: block-etc-dir-access
+  namespace: default
+spec:
+  severity: 5
+  selector:
+    matchLabels:
+      app: wisecow
+  file:
+    matchDirectories:
+    - dir: /etc/
+      recursive: true
+    action: Block
